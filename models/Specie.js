@@ -1,9 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Gallery extends Model {}
+class Specie extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
-Gallery.init(
+Specie.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,21 +20,14 @@ Gallery.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    starting_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    ending_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: 'specie',
   }
 );
 
-module.exports = Gallery;
+module.exports = Specie;
