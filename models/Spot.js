@@ -33,7 +33,7 @@ Spot.init(
     specie_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'fish',
+        model: 'specie',
         key: 'id',
       },
     },

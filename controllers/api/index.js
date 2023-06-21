@@ -1,7 +1,11 @@
 const router = require('express').Router();
 
-const userRoutes = require('./user-routes');
+const fisherRoutes = require('./fisher-routes');
+const specieRoutes = require('./specie-routes');
+const spotRoutes = require('./spot-routes');
 
-router.use('/users', userRoutes);
+router.use('/fishers', fisherRoutes);
+router.use('/species', specieRoutes);
+router.use('/spots', spotRoutes);
 
 module.exports = router;
