@@ -1,57 +1,50 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const { Spot, Specie } = require('../models');
 
-// GET all galleries for homepage
+// --------------------------------------------------------------------------------
+// ****** GET ALL SPOTS ********* REQUIRE LOGIN
 router.get('/', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  } else {
   try {
-    const dbGalleryData = await Gallery.findAll({
-      include: [
-        {
-          model: Painting,
-          attributes: ['filename', 'description'],
-        },
-      ],
+    const spotData = await Spot.findAll({
+      include: [{
+        model: Specie,
+        attributes: ['specie_id', 'specie_name'],
+      }],
     });
-
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-
-    res.render('homepage', {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
+    res.status(200).json(spotData);
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    console.log(err); // Print the error for debugging purposes
+    res.status(500).json({ error: 'Failed to retrieve fishing spots' });
   }
+}
 });
 
-// GET one gallery
-router.get('/gallery/:id', async (req, res) => {
+// --------------------------------------------------------------------------------
+
+// ***** GET SPOT BY ID ****** REQUIRE LOGIN
+router.get('/spot/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
-    // If the user is logged in, allow them to view the gallery
+    // If the user is logged in, allow them to view the spots
     try {
-      const dbGalleryData = await Gallery.findByPk(req.params.id, {
+      const dbSpotData = await Spot.findByPk(req.params.id, {
         include: [
           {
-            model: Painting,
+            model: Specie,
             attributes: [
               'id',
-              'title',
-              'artist',
-              'exhibition_date',
-              'filename',
-              'description',
+              'name',
             ],
           },
         ],
       });
-      const gallery = dbGalleryData.get({ plain: true });
-      res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
+      const spot = dbSpotData.get({ plain: true });
+      res.render('spot', { spot, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -59,19 +52,38 @@ router.get('/gallery/:id', async (req, res) => {
   }
 });
 
-// GET one painting
-router.get('/painting/:id', async (req, res) => {
+// --------------------------------------------------------------------------------
+
+// ****** GET ALL SPECIES ******* REQUIRE LOGIN
+router.get('/', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  } else {
+    try {
+      const specieData = await Specie.findAll();
+      res.status(200).json(fisherData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json({ error: 'Failed to retrieve species' });
+    }
+  }
+});
+
+// --------------------------------------------------------------------------------
+
+// ******* GET SPECIE BY ID ********** REQUIRE LOGIN
+router.get('/specie/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
-    // If the user is logged in, allow them to view the painting
+    // If the user is logged in, allow them to view the specie
     try {
-      const dbPaintingData = await Painting.findByPk(req.params.id);
+      const dbSpecieData = await Specie.findByPk(req.params.id);
 
-      const painting = dbPaintingData.get({ plain: true });
+      const specie = dbSpecieData.get({ plain: true });
 
-      res.render('painting', { painting, loggedIn: req.session.loggedIn });
+      res.render('specie', { specie, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
