@@ -11,10 +11,16 @@ router.get('/', async (req, res) => {
     const spotData = await Spot.findAll({
       include: [{
         model: Specie,
-        attributes: ['specie_id', 'specie_name'],
+        attributes: ['id', 'name'],
       }],
     });
-    res.status(200).json(spotData);
+    const spots = spotData.map((spot) =>
+      spot.get({ plain: true }));
+      res.render('homepage', {
+        spots,
+        loggedIn: req.session.loggedIn,
+      });
+    // res.status(200).json(spotData);
   } catch (err) {
     console.log(err); // Print the error for debugging purposes
     res.status(500).json({ error: 'Failed to retrieve fishing spots' });
