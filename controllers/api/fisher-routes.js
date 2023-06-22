@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Fisher } = require('../../models');
-const { route } = require('./fisher-routes');
 
 // -----------------------------------------------------------------------------------
 
@@ -114,7 +113,7 @@ router.post('/login', async (req, res) => {
     if (!dbFisherData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'Incorrect email or password. Please try again Fishy Friend!' });
       return;
     }
 
@@ -123,7 +122,7 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({ message: 'Incorrect email or password. Please try again Fishy friend!' });
       return;
     }
 
@@ -132,7 +131,7 @@ router.post('/login', async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbFisherData, message: 'You are now logged in!' });
+        .json({ user: dbFisherData, message: 'You are now logged in Pescatarian!' });
     });
   } catch (err) {
     console.log(err);
