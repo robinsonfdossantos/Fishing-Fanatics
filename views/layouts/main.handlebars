@@ -4,33 +4,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
+  <title>Fishing Fanatics</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to the Four Seasons Museum</h1>
-  </header>
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
+    <a href="/login">Signup</a>
     {{/if}}
   </nav>
+  {{#unless loggedIn}}
+  <img src="/images/10-marlin.gif" alt="Welcome page" id="marlinImage">
+  {{/unless}}
   <main>
-    <aside>
-      <h2>Enjoy the galleries!</h2>
-    </aside>
-    <div class="gallery">
+    <div class="season">
       {{{body}}}
     </div>
   </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
+  <script>
+    var marlinImage = document.getElementById('marlinImage');
+    if (marlinImage) {
+      marlinImage.classList.add('hidden');
+    }
+  </script>
   {{/if}}
 </body>
 

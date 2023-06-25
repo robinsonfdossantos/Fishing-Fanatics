@@ -1,12 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class Specie extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Specie extends Model {}
 
 Specie.init(
   {
@@ -31,3 +26,4 @@ Specie.init(
 );
 
 module.exports = Specie;
+

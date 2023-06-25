@@ -37,6 +37,13 @@ Spot.init(
         key: 'id',
       },
     },
+    eachseason_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'eachseason',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
@@ -45,5 +52,6 @@ Spot.init(
     modelName: 'spot',
   }
 );
+
 
 module.exports = Spot;

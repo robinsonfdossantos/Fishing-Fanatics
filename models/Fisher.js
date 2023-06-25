@@ -39,6 +39,13 @@ Fisher.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    spot_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'spot',
+        key: 'id',
+      },
+    },
   },
   {
     hooks: {
@@ -56,3 +63,4 @@ Fisher.init(
 );
 
 module.exports = Fisher;
+

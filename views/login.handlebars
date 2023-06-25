@@ -15,9 +15,9 @@
       </div>
     </form>
   </div>
-  <div class="login-card">
+  <div id="login" class="login-card">
     <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
+    <form id="signup" class="form signup-form">
       <div class="form-group">
         <label for="username-signup">Username:</label>
         <input class="form-input" type="text" id="username-signup" />
@@ -36,5 +36,12 @@
     </form>
   </div>
 </div>
+
+  <script>
+    var marlinImage = document.getElementById('marlinImage');
+    if (marlinImage) {
+      marlinImage.classList.add('hidden');
+    }
+  </script>
 
 <script src="./js/login.js"></script>
