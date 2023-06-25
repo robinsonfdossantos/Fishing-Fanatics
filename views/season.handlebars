@@ -1,0 +1,8 @@
+<section class="container">
+  <h3 class="season-name">{{season.name}}</h3>
+  <section class="flex-row justify-center">
+    {{#each season.eachseasons as |eachseason|}}
+    {{> eachseason-details}}
+    {{/each}}
+  </section>
+</section>
