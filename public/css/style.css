@@ -1,7 +1,7 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
+  --primary: #3e80bd;
+  --secondary: #3e5d7e;
+  --tertiary: #4b88ca;
   --quatrinary: #6c6b67;
   --light: #e3e4e3;
   --dark: #182c23;
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: 'Figtree', sans-serif;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -41,13 +41,13 @@ main {
   flex-grow: 1;
 }
 
-aside {
+/* aside {
   flex: 0;
   background-color: var(--tertiary);
   padding: 80px;
   text-align: left;
   color: var(--light);
-}
+} */
 
 nav {
   display: flex;
@@ -63,7 +63,7 @@ nav a {
 
 nav a:hover {
   color: var(--secondary);
-  background-color: var(--dark);
+  background-color: var(--light);
 }
 
 .season {
@@ -124,7 +124,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: var(--primary);
   color: var(--light);
 }
 

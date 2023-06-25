@@ -29,13 +29,13 @@ if (req.session.loggedIn) {
     seasons,
     loggedIn: req.session.loggedIn,
   });
+}  } catch (err) {
+  console.log(err);
+  res.status(500).json(err);
 }
-
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
 });
+
+
 
 // GET one season
 router.get('/season/:id', async (req, res) => {
