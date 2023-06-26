@@ -1,9 +1,36 @@
 <section class="card">
-  <a href="/eachseason/{{id}}">
+  <a href="/season/{{id}}">
     <header>{{title}}</header>
 
     <div class="card-body">
       <img src="/images/{{filename}}" alt="{{title}}">
     </div>
+  </a>
+</section>
+
+<div id="spot" class="spot-card">
+    <h2 class="page-title">Signup</h2>
+    <form id="spot" class="form spot-form">
+      <div class="form-group">
+        <label for="username-signup">Title:</label>
+        <input class="form-input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+
+  <section class="card">
+  <a href="/spot/{{id}}">
+    <header>{{name}}</header>
   </a>
 </section>

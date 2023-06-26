@@ -37,10 +37,10 @@ Spot.init(
         key: 'id',
       },
     },
-    eachseason_id: {
+    season_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'eachseason',
+        model: 'season',
         key: 'id',
       },
     },

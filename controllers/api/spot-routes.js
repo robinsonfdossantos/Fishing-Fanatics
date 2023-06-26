@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Spot } = require('../../models');
-const { route } = require('./spot-routes');
 
 // -----------------------------------------------------------------------------------
 
@@ -72,14 +71,14 @@ router.get('/', async (req, res) => {
     const spotData = await Spot.findAll();
     res.status(200).json(spotData);
   } catch (err) {
-    console.log(err); 
+    console.log(err);
     res.status(500).json({ error: 'Failed to retrieve spots' });
   }
 });
 
 // -----------------------------------------------------------------------------------
 
-// ****** GET SPECIES BY ID *******
+// ****** GET SPOT BY ID *******
 router.get('/:spot_id', async (req, res) => {
   try {
     const spotData = await Spot.findByPk(req.params.spot_id);
