@@ -44,29 +44,48 @@
 </form>
 
 <aside>
+  
   <div class="card" style="width:600px;">
-    <h5 class="card-header">Title</h5>
+    <h5 class="card-header">{{spotPost.[0].title}}</h5>
     <div class="card-body">
-      <h5 class="card-title">Description</h5>
-      <p class="card-text">Comments.</p>
+      <h5 class="card-title">{{spotPost.[0].description}}</h5>
+      <p class="card-text" style="font-style:italic; font-weight:lighter;">{{spotPost.[0].comments}}</p>
       <a href="#" class="btn btn-primary">Post Comments?</a>
     </div>
   </div>
   <div class="card" style="width:600px;">
-    <h5 class="card-header">Title</h5>
+    <h5 class="card-header">{{spotPost.[1].title}}</h5>
     <div class="card-body">
-      <h5 class="card-title">Description</h5>
-      <p class="card-text">Comments.</p>
+      <h5 class="card-title">{{spotPost.[1].description}}</h5>
+      <p class="card-text">{{spotPost.[1].comments}}</p>
+      <a href="#" class="btn btn-primary">Post comments?</a>
+    </div>
+  </div>
+  <div class="card" style="width:600px;">
+    <h5 class="card-header">{{spotPost.[2].title}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{spotPost.[2].description}}</h5>
+      <p class="card-text">{{spotPost.[2].comments}}</p>
       <a href="#" class="btn btn-primary">Post Comments?</a>
     </div>
   </div>
   <div class="card" style="width:600px;">
-    <h5 class="card-header">Title</h5>
+    <h5 class="card-header">{{spotPost.[2].title}}</h5>
     <div class="card-body">
-      <h5 class="card-title">Description</h5>
-      <p class="card-text">Comments.</p>
+      <h5 class="card-title">{{spotPost.[2].description}}</h5>
+      <p class="card-text">{{spotPost.[2].comments}}</p>
+      <a href="#" class="btn btn-primary">Post Comments?</a>
+    </div>
+  </div>
+  <div class="card" style="width:600px;">
+    <h5 class="card-header">{{spotPost.[2].title}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{spotPost.[2].description}}</h5>
+      <p class="card-text">{{spotPost.[2].comments}}</p>
       <a href="#" class="btn btn-primary">Post Comments?</a>
     </div>
   </div>
   
 </aside>
+
+<script src="/public/js/spotpost.js"></script>
