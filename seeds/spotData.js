@@ -20,7 +20,8 @@ const spotData = [
     description: 'located at Scotland',
     comments: 'Make this an enjoyable trip', 
     fisher_id: 3,
-    specie_id: 6
+    specie_id: 6,
+    season_id: 1,
   }
 ];
 
