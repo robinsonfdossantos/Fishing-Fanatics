@@ -23,12 +23,9 @@ Spot.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    fisher_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'fisher',
-        key: 'id',
-      },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     specie_id: {
       type: DataTypes.INTEGER,
@@ -37,13 +34,7 @@ Spot.init(
         key: 'id',
       },
     },
-    season_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'season',
-        key: 'id',
-      },
-    },
+    
   },
   {
     sequelize,

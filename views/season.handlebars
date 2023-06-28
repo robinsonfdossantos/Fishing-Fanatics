@@ -7,26 +7,26 @@
   </section>
 </section>
 
-<form class="row g-3">
+<form class="row g-3" method ="post" action ="/api/spots">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Title</label>
-    <input type="email" class="form-control" id="inputEmail4">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Description</label>
-    <input type="password" class="form-control" id="inputPassword4">
+    <label for="description" class="form-label">Description</label>
+    <input type="text" class="form-control" id="description" name="description">
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Location</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Location">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" class="form-control" id="location" placeholder="Location" name="location">
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Comments</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Comments...">
+    <label for="comments" class="form-label">Comments</label>
+    <input type="text" class="form-control" id="comments" placeholder="Comments..." name="comments">
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">Specie</label>
-    <select id="inputState" class="form-select">
+    <label for="specie" class="form-label">Specie</label>
+    <select id="specie" class="form-select">
       <option selected>Choose...</option>
       <option>Swordfish</option>
       <option>Tuna</option>
@@ -39,21 +39,24 @@
   </div>
   
   <div class="col-12" style ="margin-bottom: 5px;">
-    <button type="submit" class="btn btn-primary" style="width:100px; font-weight: bold;">Post</button>
+    <button id ="post" type="submit" class="btn btn-primary" name="post" style="width:100px; font-weight: bold;">Post</button>
   </div>
 </form>
 
-<aside>
-  
+<aside class="post-container">
+  {{#each spotPost as |spots|}}
   <div class="card" style="width:600px;">
-    <h5 class="card-header">{{spotPost.[0].title}}</h5>
+    <h5 class="card-header">{{this.title}}</h5>
     <div class="card-body">
-      <h5 class="card-title">{{spotPost.[0].description}}</h5>
-      <p class="card-text" style="font-style:italic; font-weight:lighter;">{{spotPost.[0].comments}}</p>
+      <h5 class="card-title">{{this.description}}</h5>
+      <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.comments}}</p>
+      <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.location}}</p>
+      
       <a href="#" class="btn btn-primary">Post Comments?</a>
     </div>
   </div>
-  <div class="card" style="width:600px;">
+  {{/each}}
+  {{!-- <div class="card" style="width:600px;">
     <h5 class="card-header">{{spotPost.[1].title}}</h5>
     <div class="card-body">
       <h5 class="card-title">{{spotPost.[1].description}}</h5>
@@ -85,7 +88,7 @@
       <a href="#" class="btn btn-primary">Post Comments?</a>
     </div>
   </div>
-  
+   --}}
 </aside>
 
-<script src="/public/js/spotpost.js"></script>
+<script src="/js/spotpost.js"></script>
