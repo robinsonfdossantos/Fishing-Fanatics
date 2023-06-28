@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Spot } = require('../../models');
 
-
-
 // -----------------------------------------------------------------------------------
 
 // ****** CREATE SPOT******
@@ -13,6 +11,7 @@ router.post('/', async (req, res) => {
       description: req.body.description,
       comments: req.body.comments,
       location: req.body.location,
+      specie_id: req.body.specie_id,
     });
 
     req.session.save(() => {

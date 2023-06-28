@@ -94,4 +94,19 @@ router.get('/:specie_id', async (req, res) => {
 });
 
 
+// Route to fetch species data
+router.get('/api/species', async (req, res) => {
+  try {
+    const species = await Specie.findAll({
+      attributes: ['id', 'name'],
+    });
+    res.json(species);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
+
 module.exports = router;
