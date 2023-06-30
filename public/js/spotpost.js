@@ -41,6 +41,7 @@ const postSpot = async (event) => {
     comments: formComments,
     location: formLocation,
     specie_id: formSpecie,
+    season_id: window.location.pathname.split("/")[2]
   }
   
   const response = await fetch('/api/spots', {
@@ -51,13 +52,6 @@ const postSpot = async (event) => {
 
   if (response.ok) {
       document.location.replace(window.location.href);
-    // document.location.replace('/season/1');
-    // const responseData = await response.json();
-    // cardHeader.textContent = responseData.title;
-    // cardTitle.textContent = responseData.description;
-    // cardText.textContent = responseData.comments;
-    // cardLocation.textContent = responseData.location;
-    // cardSpecie.textContent = responseData.specie_id;
   } else {
     console.log('Error:', response.status);
   }
