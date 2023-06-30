@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Season, Spot } = require('../models');
+const { Season, Spot, Specie } = require('../models');
 
 // GET all season for homepage
 router.get('/', async (req, res) => {
@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
     const seasons = dbSeasonData.map((season) =>
       season.get({ plain: true })
     );
-    console.log(seasons)
 // Check if the user is logged in
 if (req.session.loggedIn) {
   // Render the season.handlebars template
@@ -41,12 +40,18 @@ router.get('/season/:id', async (req, res) => {
       const dbSeasonData = await Season.findByPk(req.params.id)
       const season = dbSeasonData.get({ plain: true });
       const dbSpotData = await Spot.findAll({
-
+        where: {'season_id': req.params.id},
         attributes: {exclude: ['fisher_id']},
+        include: [{
+          model: Specie,
+          // attributes: [
+          //   'id',
+          //   'name',
+          // ],
+        }]
       });
       const spotPost = dbSpotData.map((item) => item.get({ plain: true }) )
       console.log(spotPost)
-      console.log(spotPost.specie_id) 
       res.render('season', { season, spotPost, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);

@@ -11,20 +11,20 @@ Fisher.belongsTo(Spot, {
   foreignKey: 'fisher_id',
 });
 
-Spot.hasMany(Specie, {
+Spot.belongsTo(Specie, {
   foreignKey: 'specie_id',
 });
 
-Specie.belongsTo(Spot, {
+Specie.hasMany(Spot, {
   foreignKey: 'specie_id',
 });
 
 Season.hasMany(Spot, {
-  foreignKey: 'spot_id',
+  foreignKey: 'season_id',
 });
 
 Spot.belongsTo(Season, {
-  foreignKey: 'spot_id',
+  foreignKey: 'season_id',
 });
 
 module.exports = { Fisher, Spot, Specie, Season };

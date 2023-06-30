@@ -6,14 +6,17 @@ const spotData = [
     description: 'located at California/Nevada, United States',
     comments: 'Do not forget take worms', 
     location: 'Brazil',
-    specie_id: 2
+    specie_id: 2,
+    season_id: 1
   },
   {
     title: 'Great Barrier Reef',
-    description: 'Beautifull place to enjoy a fishing journey',
+    description: 'Beautiful place to enjoy a fishing journey',
     comments: 'Better in Summer but good during whole year', 
     location: 'Australia',
-    specie_id: 4
+    specie_id: 4,
+    season_id: 2
+
   }, 
   {
     title: 'Loch Ness',
@@ -21,6 +24,7 @@ const spotData = [
     comments: 'Make this an enjoyable trip', 
     location: 'Scotland',
     specie_id: 6,
+    season_id: 1
   }
 ];
 
