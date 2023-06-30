@@ -12,8 +12,9 @@ router.post('/', async (req, res) => {
       comments: req.body.comments,
       location: req.body.location,
       specie_id: req.body.specie_id,
+      season_id: req.body.season_id,
     });
-
+    console.log(dbSpotData)
     req.session.save(() => {
       req.session.loggedIn = true;
 
