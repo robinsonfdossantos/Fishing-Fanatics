@@ -51,13 +51,6 @@ const postSpot = async (event) => {
 
   if (response.ok) {
       document.location.replace(window.location.href);
-    // document.location.replace('/season/1');
-    // const responseData = await response.json();
-    // cardHeader.textContent = responseData.title;
-    // cardTitle.textContent = responseData.description;
-    // cardText.textContent = responseData.comments;
-    // cardLocation.textContent = responseData.location;
-    // cardSpecie.textContent = responseData.specie_id;
   } else {
     console.log('Error:', response.status);
   }
