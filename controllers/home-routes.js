@@ -40,17 +40,14 @@ router.get('/season/:id', async (req, res) => {
       const dbSeasonData = await Season.findByPk(req.params.id)
       const season = dbSeasonData.get({ plain: true });
       const dbSpotData = await Spot.findAll({
-        where: {'season_id': req.params.id},
+        where: {season_id: parseInt(req.params.id)},
         attributes: {exclude: ['fisher_id']},
         include: [{
-          model: Specie,
-          // attributes: [
-          //   'id',
-          //   'name',
-          // ],
+          model: Specie
         }]
       });
-      const spotPost = dbSpotData.map((item) => item.get({ plain: true }) )
+      const spotPost = dbSpotData.map((item) => item.get({ plain: true }))
+
       console.log(spotPost)
       res.render('season', { season, spotPost, loggedIn: req.session.loggedIn });
     } catch (err) {

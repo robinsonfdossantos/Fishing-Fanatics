@@ -41,6 +41,7 @@ const postSpot = async (event) => {
     comments: formComments,
     location: formLocation,
     specie_id: formSpecie,
+    season_id: window.location.pathname.split("/")[2]
   }
   
   const response = await fetch('/api/spots', {
