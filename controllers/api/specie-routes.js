@@ -8,8 +8,9 @@ const { route } = require('./specie-routes');
 router.post('/', async (req, res) => {
   try {
     const dbSpecieData = await Specie.create({
-      name: req.body.username,
+      name: req.body.name,
     });
+    console.log(dbSpecieData); 
 
     req.session.save(() => {
       req.session.loggedIn = true;
@@ -21,6 +22,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // -----------------------------------------------------------------------------------
 

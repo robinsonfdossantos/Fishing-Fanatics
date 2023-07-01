@@ -7,7 +7,9 @@
   </section>
 </section>
 
-<form class="row g-3" id ='post'>
+<div class="page">
+<section class="seasons-form">
+<form class="row g-3" id='post'>
   <div class="col-md-6">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control" id="title" name="title">
@@ -30,16 +32,32 @@
       <option selected>Choose...</option>
     </select>
   </div>
-  
+
   <div class="col-12" style="margin-bottom: 5px;">
-    <button id="post" type="submit" class="btn btn-primary" name="post" style="width:100px; font-weight: bold;">Post</button>
+    <button id="post" type="submit" class="btn btn-primary" name="post"
+      style="width:100px; font-weight: bold;">Post</button>
   </div>
 </form>
 
+<form class="row g-3" id="add-fish-form">
+  <div class="col-12">
+    <p>💥 🐠 🎣 Lucky fisher!!! Caught a new specie? 🎣 🐠 💥</p>
+    <p> ***** REGISTER IT NOW ***** </p>
+    <label for="new-fish" class="form-label">New Fish</label>
+    <input type="text" class="form-control" id="new-fish" placeholder="New Fish" name="specie">
+  </div>
+  <div class="col-12" style="margin-bottom: 5px;">
+    <button id="add-fish" type="submit" class="btn btn-primary" name="post" style="width:100px; font-weight: bold;">Add
+      Fish</button>
+  </div>
+</form>
+</section>
+</div>
+
 <aside class="post-container">
   {{#each spotPost as |spots|}}
-  <div class="card" style="width:600px;">
-    <h5 class="card-header">{{this.title}}</h5>
+  <div class="card">
+    <h5 class="card-header";>{{this.title}}</h5>
     <div class="card-body">
       <h5 class="card-title">{{this.description}}</h5>
       <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.comments}}</p>
@@ -51,5 +69,7 @@
   {{/each}}
 </aside>
 
+
 <script src="/js/specieData.js"></script>
 <script src="/js/spotpost.js"></script>
+<script src="/js/fishpost.js"></script>
