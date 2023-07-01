@@ -1,4 +1,4 @@
-# Fising-Fanatics
+# Fishing-Fanatics
 Share your fishing spots with fellow fish fanatics
 
 ## USER STORY 
@@ -44,13 +44,13 @@ THEN I am taken to the home page.
 - [License](#license)
 
 ## Project Description
-
+```
 The objective of this project was to design a user-friendly web application that enables fishing enthusiasts to interact with each other and share information about their favourite fishing spots and fishing experiences via posts on the application. The application was created to enable existing users login or new users created to gain access to the application. 
 
 After sign in, users are presented with a page containing the 4 seasons and they can click on any season to make a post relating to the season they went fishing. Users will also see previous posts from other users. To make a post, the user will be required to complete a form and then also select the specie of fish caught from a drop-down list of fish species. The user can also add a new specie of fish to the existing species.
 
 The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
-
+```
 ## Usage
 
 <!-- ADD SCREENSHOTS AND SOME INSTRUCTIONS -->
