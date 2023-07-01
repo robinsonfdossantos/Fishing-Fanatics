@@ -2,6 +2,9 @@ const { Specie } = require('../models');
 
 const specieData = [
   {
+    name: ' ',
+  },
+  {
     name: 'Tuna',
   },
   {
