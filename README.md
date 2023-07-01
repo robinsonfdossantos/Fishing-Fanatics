@@ -1,13 +1,41 @@
 # Fishing-Fanatics
-Share your fishing spots with fellow fish fanatics
+Share your fishing spots with fellow fish fanatics!
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-E365FF.svg)](https://opensource.org/licenses/MIT)
+
+## Project Description
+```
+The objective of this project was to design a user-friendly web application that enables fishing enthusiasts to interact with each other and share information about their favourite fishing spots and fishing experiences via posts on the application. The application was created to enable existing users to return and login or new users to sign up to gain access to the application. 
+
+After sign in, users are presented with a page containing the 4 seasons and they can click on any season to make a post relating to the season they went fishing. Users will also see previous posts from other users. To make a post, the user will be required to complete a form and then also select the specie of fish caught from a drop-down list of fish species. The user can also add a new specie of fish to the existing species if the fish they caught is not already there.
+
+The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
+```
+
+## Table of Contents
+
+- [Description](#description)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
 ## USER STORY 
 ```
-As a fishing enthusiast,
+As a fishing enthusiast
+I want to share my fishing spots with fellow fishers
+So that I can add value to my fishing community
 
-I WANT to be able to share my fishing spots with fellow fish people
+I want to highlight what season I fished in
+So that I can improve the data of fishing success
 
-So they too can share their spots and we can rate each other's spots, comment and possibly visit those spots in future.
+I want to see other people’s recommended fishing spots
+So that I can fish those spots too and catch good fish
+
+I want to share my thoughts by commenting
+So that I can let my fellow fishers know what success I have had
 ```
 ## ACCEPTANCE CRITERIA
 ```
@@ -35,22 +63,17 @@ THEN I am taken to the home page.
 
 ```
 
-## Table of Contents (Optional)
+## Installation
 
-- [Description] (#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+Access repository here ___hyperlink
 
-## Project Description
-```
-The objective of this project was to design a user-friendly web application that enables fishing enthusiasts to interact with each other and share information about their favourite fishing spots and fishing experiences via posts on the application. The application was created to enable existing users login or new users created to gain access to the application. 
+Clone to your local machine
 
-After sign in, users are presented with a page containing the 4 seasons and they can click on any season to make a post relating to the season they went fishing. Users will also see previous posts from other users. To make a post, the user will be required to complete a form and then also select the specie of fish caught from a drop-down list of fish species. The user can also add a new specie of fish to the existing species.
+Utilising terminal run package dependanceis
 
-The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
-```
+
+
+
 ## Usage
 
 <!-- ADD SCREENSHOTS AND SOME INSTRUCTIONS -->
