@@ -10,7 +10,6 @@ The objective of this project was to design a user-friendly web application that
 
 After sign in, users are presented with a page containing the 4 seasons and they can click on any season to make a post relating to the season they went fishing. Users will also see previous posts from other users. To make a post, the user will be required to complete a form and then also select the specie of fish caught from a drop-down list of fish species. The user can also add a new specie of fish to the existing species if the fish they caught is not already there.
 
-The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
 ```
 
 ## Table of Contents
@@ -21,6 +20,7 @@ The project was developed employing the *Model-View-Controller (MVC)* methodolog
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [Credits](#credits)
 - [License](#license)
 
@@ -125,6 +125,12 @@ Now you can access the season of your desire:
 View existing posts or make your own, it's all about a good time!
 ![FF-Posts](/public/images/readmeref/FFPosts.png)
 
+## Technologies
+---
+
+```
+The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
+```
 
 ## Credits
 ---
