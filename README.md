@@ -69,10 +69,42 @@ Access repository here ___hyperlink
 
 Clone to your local machine
 
-Utilising terminal run package dependanceis
+Utilising terminal run package dependancies:
 
+```md
+  npm i 
+  ```
+Create a new '.env' file within the FISHING FANATICS root director, populate it with the following details:
 
+  ```md
+  DB_NAME='fishing_db'
+  DB_USER='<your-MYSQL-username>'
+  DB_PASSWORD='<your-MySQL-password>'
+ ```
 
+Open and log in to the mysql shell:
+
+```md
+  mysql -u root -p
+  ```
+
+Create the database:
+
+  ```md
+  source schema.sql;
+  ```
+
+  Open the server.js file in a new terminal and create the tables and relationships:
+```md
+  npm run seed
+  ```
+
+  Fire it up:
+```md
+  npm start
+  ```
+
+Happy days at http://localhost:3001! 😁
 
 ## Usage
 
