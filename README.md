@@ -1,9 +1,10 @@
 # Fishing-Fanatics
-Share your fishing spots with fellow fish fanatics!
+Share your best spots with fellow fishing fanatics!
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-E365FF.svg)](https://opensource.org/licenses/MIT)
 
 ## Project Description
+---
 ```
 The objective of this project was to design a user-friendly web application that enables fishing enthusiasts to interact with each other and share information about their favourite fishing spots and fishing experiences via posts on the application. The application was created to enable existing users to return and login or new users to sign up to gain access to the application. 
 
@@ -13,6 +14,7 @@ The project was developed employing the *Model-View-Controller (MVC)* methodolog
 ```
 
 ## Table of Contents
+---
 
 - [Description](#description)
 - [User Story](#user-story)
@@ -22,7 +24,8 @@ The project was developed employing the *Model-View-Controller (MVC)* methodolog
 - [Credits](#credits)
 - [License](#license)
 
-## USER STORY 
+## User Story
+---
 ```
 As a fishing enthusiast
 I want to share my fishing spots with fellow fishers
@@ -37,7 +40,8 @@ So that I can fish those spots too and catch good fish
 I want to share my thoughts by commenting
 So that I can let my fellow fishers know what success I have had
 ```
-## ACCEPTANCE CRITERIA
+## Acceptance Criteria
+---
 ```
 WHEN I open the web application,
 THEN the home page should include a nav bar with "Home", "Login" and "Sign up" buttons.
@@ -59,60 +63,71 @@ THEN my session continues and I remain logged in.
 
 WHEN I click on the "logout" button,
 THEN I am taken to the home page.
-
-
 ```
 
 ## Installation
+---
 
-Access repository here ___hyperlink
++ Access repository here:
+https://github.com/robinsonfdossantos/Fishing-Fanatics
 
-Clone to your local machine
-
-Utilising terminal run package dependancies:
++ Clone to your local machine within the location of your desire:
 
 ```md
-  npm i 
-  ```
-Create a new '.env' file within the FISHING FANATICS root director, populate it with the following details:
+git clone git@github.com:robinsonfdossantos/Fishing-Fanatics.git
+```
 
-  ```md
++ Create a new '.env' file within the FISHING FANATICS root directory, populate it with the following details:
+```md
   DB_NAME='fishing_db'
   DB_USER='<your-MYSQL-username>'
   DB_PASSWORD='<your-MySQL-password>'
  ```
+ 
++ Utilising terminal install package dependancies:
+```md
+  npm i 
+  ```
 
-Open and log in to the mysql shell:
-
++ Open and log in to the mysql shell:
 ```md
   mysql -u root -p
   ```
 
-Create the database:
-
-  ```md
++ Create the database:
+ ```md
   source schema.sql;
   ```
 
-  Open the server.js file in a new terminal and create the tables and relationships:
++ Open the server.js file in a new terminal and create the tables and relationships:
 ```md
   npm run seed
   ```
 
-  Fire it up:
++ Fire it up:
 ```md
   npm start
   ```
 
-Happy days at http://localhost:3001! 😁
++ Happy days at http://localhost:3001! 😁
 
-## Usage
+## Usage and Screenshots
+---
+You will be greeted by the home page:
+![FF-Homepage](/public/images/readmeref/FFHomepage.png)
 
-<!-- ADD SCREENSHOTS AND SOME INSTRUCTIONS -->
+From here you can log in or sign up:
+![FF-Login](/public/images/readmeref/FFLogin.png)
+
+Now you can access the season of your desire:
+![FF-Seasons](/public/images/readmeref/FFSeasons.png)
+
+View existing posts or make your own, it's all about a good time!
+![FF-Posts](/public/images/readmeref/FFPosts.png)
 
 
 ## Credits
-
+---
 Web app developed by:
 - Robinson Dos Santos
 - Kanayochi Ifediora
@@ -122,13 +137,7 @@ Web app developed by:
 CSS framework by
 
 ## License
-
-
+---
 MIT Licensed unless otherwise indicated.
-
-
-
-## Features
-
 
 
