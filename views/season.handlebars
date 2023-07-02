@@ -1,5 +1,5 @@
 <section class="container">
-  <h3 class="season-name">{{season.name}}</h3>
+ <h3 class="season-name" style="color:  #3e5d7e; font-size: 60px; font-weight: bold;">{{season.name}}</h3>
   <section class="flex-row justify-center">
     {{#each season.seasons as |season|}}
     {{> eachseason-details}}
@@ -56,7 +56,7 @@
 
 <aside class="post-container">
   {{#each spotPost as |spots|}}
-  <div class="card">
+  <div class="card" style="border: 2px solid gold;">
     <h5 class="card-header";>{{this.title}}</h5>
     <div class="card-body">
       <h5 class="card-title">Description: {{this.description}}</h5>
