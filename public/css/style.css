@@ -43,9 +43,17 @@ nav {
 
 nav a {
   color: var(--light);
-  padding: 14px 20px;
+  padding: 20px 20px;
   text-decoration: none;
   text-align: center;
+  font-size: 24px;
+  font-family: cursive;
+}
+
+#logout {
+  font-size: 24px;
+  font-family: cursive;
+  color: var(--dark);
 }
 
 nav a:hover {
@@ -118,6 +126,7 @@ img {
 }
 
 .card header {
+  display: flex;
   color: var(--light);
   font-weight: bold;
   text-transform: uppercase;
@@ -125,6 +134,8 @@ img {
   background-color: var(--tertiary);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  justify-content: center;
+  font-family: cursive;
 }
 
 .card-body {
@@ -137,11 +148,12 @@ img {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
-  border: 10px groove gold;
+  border: 10px outset var(--primary);
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left: 100px;
+  border-radius: 10px;
 }
 
 /* LAYOUT */
@@ -158,9 +170,10 @@ img {
   width: 600px;
   position: relative;
   right: 200px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0 0 60px 0;
 }
+
 aside {
   background-color: var(--primary);
 }
@@ -170,19 +183,28 @@ aside {
   justify-content: center;
 }
 
-.seasons-form {
-  width: 35%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-left: 190px;
-}
 
 .post-container {
+  display: flex;
   width: 50%;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 10px;
 }
 
 .card-header {
   display: flex;
   justify-content: center;
+}
+
+.each-season {
+  display: flex;
+}
+
+.seasons-form {
+  width: 35%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 170px;
 }

@@ -7,68 +7,71 @@
   </section>
 </section>
 
-<div class="page">
-<section class="seasons-form">
-<form class="row g-3" id='post'>
-  <div class="col-md-6">
-    <label for="title" class="form-label">Spot Name</label>
-    <input type="text" class="form-control" id="title" name="title">
-  </div>
-  <div class="col-md-6">
-    <label for="description" class="form-label">Description</label>
-    <input type="text" class="form-control" id="description" name="description">
-  </div>
-  <div class="col-12">
-    <label for="location" class="form-label">Location</label>
-    <input type="text" class="form-control" id="location" placeholder="Location" name="location">
-  </div>
-  <div class="col-12">
-    <label for="comments" class="form-label">Comments</label>
-    <input type="text" class="form-control" id="comments" placeholder="Comments..." name="comments">
-  </div>
-  <div class="col-md-4">
-    <label for="specie" class="form-label">Specie</label>
-    <select id="specie" class="form-select">
-      <option selected>Choose...</option>
-    </select>
-  </div>
 
-  <div class="col-12" style="margin-bottom: 5px;">
-    <button id="post" type="submit" class="btn btn-primary" name="post"
-      style="width:100px; font-weight: bold;">Post</button>
-  </div>
-</form>
+<body class="each-season">
+  <section class="seasons-form">
+    <form class="row g-3" id='post'>
+      <div class="col-md-6">
+        <label for="title" class="form-label">Spot Name</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="col-md-6">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description">
+      </div>
+      <div class="col-12">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+      </div>
+      <div class="col-12">
+        <label for="comments" class="form-label">Comments</label>
+        <input type="text" class="form-control" id="comments" placeholder="Comments..." name="comments">
+      </div>
+      <div class="col-md-4">
+        <label for="specie" class="form-label">Specie</label>
+        <select id="specie" class="form-select">
+          <option value="" selected>Choose...</option>
+        </select>
+      </div>
 
-<form class="row g-3" id="add-fish-form">
-  <div class="col-12">
-    <p>💥 🐠 🎣 Lucky fisher!!! Caught a new specie? 🎣 🐠 💥</p>
-    <p> ***** REGISTER IT NOW ***** </p>
-    <label for="new-fish" class="form-label">New Fish</label>
-    <input type="text" class="form-control" id="new-fish" placeholder="New Fish" name="specie">
-  </div>
-  <div class="col-12" style="margin-bottom: 5px;">
-    <button id="add-fish" type="submit" class="btn btn-primary" name="post" style="width:100px; font-weight: bold;">Add
-      Fish</button>
-  </div>
-</form>
-</section>
-</div>
 
-<aside class="post-container">
-  {{#each spotPost as |spots|}}
-  <div class="card" style="border: 2px solid gold;">
-    <h5 class="card-header";>{{this.title}}</h5>
-    <div class="card-body">
-      <h5 class="card-title">Description: {{this.description}}</h5>
-      <p class="card-text" style="font-style:italic; font-weight:lighter;">Comments: {{this.comments}}</p>
-      <p class="card-text" style="font-style:italic; font-weight:lighter;">Location: {{this.location}}</p>
-      <p class="card-text" style="font-style:italic; font-weight:lighter;">Specie: {{this.specie.name}}</p>
-      <a href="#" class="btn btn-primary">Post Comments</a>
+      <div class="col-12" style="margin-bottom: 5px;">
+        <button id="post" type="submit" class="btn btn-primary" name="post"
+          style="width:100px; font-weight: bold;">Post</button>
+      </div>
+    </form>
+
+    <form class="row g-3" id="add-fish-form">
+      <div class="col-12">
+        <p>💥 🐠 🎣 Lucky fisher!!! Caught a new specie? 🎣 🐠 💥</p>
+        <p> ***** REGISTER IT NOW ***** </p>
+        <label for="new-fish" class="form-label">New Fish</label>
+        <input type="text" class="form-control" id="new-fish" placeholder="New Fish" name="specie">
+      </div>
+      <div class="col-12" style="margin-bottom: 5px;">
+        <button id="add-fish" type="submit" class="btn btn-primary" name="post"
+          style="width:100px; font-weight: bold;">Add
+          Fish</button>
+      </div>
+    </form>
+  </section>
+
+
+  <aside class="post-container">
+    {{#each spotPost as |spots|}}
+    <div class="card">
+      <h5 class="card-header">{{this.title}}</h5>
+      <div class="card-body">
+        <h5 class="card-title">Description: {{this.description}}</h5>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Comments: {{this.comments}}</p>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Location: {{this.location}}</p>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Specie: {{this.specie.name}}</p>
+        <a href="#" class="btn btn-primary">Post Comments</a>
+      </div>
     </div>
-  </div>
-  {{/each}}
-</aside>
-
+    {{/each}}
+  </aside>
+</body>
 
 <script src="/js/specieData.js"></script>
 <script src="/js/spotpost.js"></script>
