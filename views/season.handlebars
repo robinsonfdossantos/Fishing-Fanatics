@@ -1,5 +1,5 @@
 <section class="container">
-  <h3 class="season-name">{{season.name}}</h3>
+ <h3 class="season-name" style="color:  #3e5d7e; font-size: 60px; font-weight: bold;">{{season.name}}</h3>
   <section class="flex-row justify-center">
     {{#each season.seasons as |season|}}
     {{> eachseason-details}}
@@ -7,11 +7,12 @@
   </section>
 </section>
 
+
 <body class="each-season">
   <section class="seasons-form">
     <form class="row g-3" id='post'>
       <div class="col-md-6">
-        <label for="title" class="form-label">Title</label>
+        <label for="title" class="form-label">Spot Name</label>
         <input type="text" class="form-control" id="title" name="title">
       </div>
       <div class="col-md-6">
@@ -32,6 +33,7 @@
           <option value="" selected>Choose...</option>
         </select>
       </div>
+
 
       <div class="col-12" style="margin-bottom: 5px;">
         <button id="post" type="submit" class="btn btn-primary" name="post"
@@ -54,15 +56,16 @@
     </form>
   </section>
 
+
   <aside class="post-container">
     {{#each spotPost as |spots|}}
     <div class="card">
       <h5 class="card-header">{{this.title}}</h5>
       <div class="card-body">
-        <h5 class="card-title">{{this.description}}</h5>
-        <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.comments}}</p>
-        <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.location}}</p>
-        <p class="card-text" style="font-style:italic; font-weight:lighter;">{{this.specie.name}}</p>
+        <h5 class="card-title">Description: {{this.description}}</h5>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Comments: {{this.comments}}</p>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Location: {{this.location}}</p>
+        <p class="card-text" style="font-style:italic; font-weight:lighter;">Specie: {{this.specie.name}}</p>
         <a href="#" class="btn btn-primary">Post Comments</a>
       </div>
     </div>
