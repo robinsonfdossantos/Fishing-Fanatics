@@ -1,8 +1,9 @@
 # Fishing-Fanatics
 Share your best spots with fellow fishing fanatics!
 
-https://adel-fsf-mar-2023.slack.com/archives/C05D2EQJJTX/p1688169261893999
+Access our live website and join us at: 
 
+https://polar-ridge-73411-3a05ece12937.herokuapp.com/
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-E365FF.svg)](https://opensource.org/licenses/MIT)
 
