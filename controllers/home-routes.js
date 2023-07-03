@@ -1,27 +1,41 @@
 const router = require('express').Router();
 const { Season, Spot, Specie } = require('../models');
+const newsAPI = require('newsapi')
 
 // GET all season for homepage
 router.get('/', async (req, res) => {
   try {
     const dbSeasonData = await Season.findAll();
-
+  
     const seasons = dbSeasonData.map((season) =>
       season.get({ plain: true })
     );
+    const news = new newsAPI('4b88cfe067334fcea64575c884088db9');
+    await news.v2.topHeadlines({
+      category: 'science',
+      language: 'en',
+      country: 'au',
+    })
+    .then(response => {
+      console.log(response)
+    })
+    .then((response) => {
 // Check if the user is logged in
 if (req.session.loggedIn) {
+
   // Render the season.handlebars template
   res.render('homepage', {
-    seasons,
+    seasons, response,
     loggedIn: req.session.loggedIn,
   });
 } else {
   res.render('homepage', {
-    seasons,
+    seasons, response,
     loggedIn: req.session.loggedIn,
   });
-}  } catch (err) {
+}
+}) 
+} catch (err) {
   console.log(err);
   res.status(500).json(err);
 }
