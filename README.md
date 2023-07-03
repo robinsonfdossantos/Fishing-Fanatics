@@ -1,6 +1,9 @@
 # Fishing-Fanatics
 Share your best spots with fellow fishing fanatics!
 
+https://adel-fsf-mar-2023.slack.com/archives/C05D2EQJJTX/p1688169261893999
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-E365FF.svg)](https://opensource.org/licenses/MIT)
 
 ## Project Description
@@ -15,11 +18,11 @@ After sign in, users are presented with a page containing the 4 seasons and they
 ## Table of Contents
 ---
 
-- [Description](#description)
+- [Description](#project-description)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#usage-and-screenshots)
 - [Technologies](#technologies)
 - [Credits](#credits)
 - [License](#license)
@@ -129,7 +132,9 @@ View existing posts or make your own, it's all about a good time!
 ---
 
 ```
-The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns. It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
+The project was developed employing the *Model-View-Controller (MVC)* methodology depicting Separation of Concerns.
+It incorporated several code libraries including but not limited to the following: `sequelize`, `mysql2`, `express.handlebars`, `express.js`, `node.js` e.t.c.
+Additional technology chosen to meet criteria is `newsAPI`
 ```
 
 ## Credits
@@ -138,9 +143,6 @@ Web app developed by:
 - Robinson Dos Santos
 - Kanayochi Ifediora
 - Iggy Gaudio
-
-
-CSS framework by
 
 ## License
 ---
